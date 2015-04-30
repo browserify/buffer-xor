@@ -1,0 +1,28 @@
+{
+  "name": "PROJECTNAME",
+  "version": "0.0.1",
+  "description": "PROJECTNAME",
+  "main": "index.js",
+  "scripts": {
+    "standard": "standard",
+    "test": "npm run-script unit",
+    "unit": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dcousens/PROJECTNAME.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dcousens/PROJECTNAME/issues"
+  },
+  "homepage": "https://github.com/dcousens/PROJECTNAME",
+  "keywords": [
+    "PROJECTNAME"
+  ],
+  "author": "Daniel Cousens",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "*",
+    "standard": "*"
+  }
+}

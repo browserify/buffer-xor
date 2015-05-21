@@ -5,6 +5,8 @@
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
+A simple module for bitwise-xor on buffers.
+
 
 ## Example
 

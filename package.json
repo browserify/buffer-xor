@@ -10,12 +10,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/dcousens/buffer-xor.git"
+    "url": "https://github.com/dcousens/node-buffer-xor.git"
   },
   "bugs": {
-    "url": "https://github.com/dcousens/buffer-xor/issues"
+    "url": "https://github.com/dcousens/node-buffer-xor/issues"
   },
-  "homepage": "https://github.com/dcousens/buffer-xor",
+  "homepage": "https://github.com/dcousens/node-buffer-xor",
   "keywords": [
     "bits",
     "bitwise",

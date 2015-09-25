@@ -2,7 +2,7 @@
 
 var assert = require('assert')
 var xor = require('../')
-var xorInline = require('../inline')
+var xorInplace = require('../inplace')
 var fixtures = require('./fixtures')
 
 describe('xor', function () {
@@ -21,12 +21,12 @@ describe('xor', function () {
   })
 })
 
-describe('xor/inline', function () {
+describe('xor/inplace', function () {
   fixtures.forEach(function (f) {
     it('returns ' + f.expected + ' for ' + f.a + '/' + f.b, function () {
       var a = new Buffer(f.a, 'hex')
       var b = new Buffer(f.b, 'hex')
-      var actual = xorInline(a, b)
+      var actual = xorInplace(a, b)
 
       assert.equal(actual.toString('hex'), f.expected)
 

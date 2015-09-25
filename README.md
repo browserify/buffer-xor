@@ -20,16 +20,16 @@ console.log(xor(a, b))
 ```
 
 
-Or for those seeking those few extra cycles, perform the operation inline:
+Or for those seeking those few extra cycles, perform the operation in place:
 
 ``` javascript
-var xorInline = require("buffer-xor/inline")
+var xorInplace = require("buffer-xor/inplace")
 var a = new Buffer('00ff0f', 'hex')
 var b = new Buffer('f0f0', 'hex')
 
-console.log(xorInline(a, b))
+console.log(xorInplace(a, b))
 // => <Buffer f0 0f>
-// NOTE: xorInline will return the shorter slice of its parameters
+// NOTE: xorInplace will return the shorter slice of its parameters
 
 // See that a has been mutated
 console.log(a)

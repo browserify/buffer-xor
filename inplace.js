@@ -5,5 +5,5 @@ module.exports = function xorInplace (a, b) {
     a[i] = a[i] ^ b[i]
   }
 
-  return a.slice(0, length)
+  return a
 }

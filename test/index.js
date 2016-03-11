@@ -28,7 +28,7 @@ describe('xor/inplace', function () {
       var b = new Buffer(f.b, 'hex')
       var actual = xorInplace(a, b)
 
-      assert.equal(actual.toString('hex'), f.expected)
+      assert.strictEqual(actual, a)
 
       // a mutated, b unchanged
       assert.equal(a.toString('hex'), f.mutated || f.expected)

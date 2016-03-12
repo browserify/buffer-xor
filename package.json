@@ -2,11 +2,15 @@
   "name": "buffer-xor",
   "version": "1.0.3",
   "description": "A simple module for bitwise-xor on buffers",
+  "files": [
+    "index.js",
+    "inplace.js"
+  ],
   "main": "index.js",
   "scripts": {
     "standard": "standard",
-    "test": "npm run-script unit",
-    "unit": "mocha"
+    "test": "npm run standard && npm run unit",
+    "unit": "tape test/*.js"
   },
   "repository": {
     "type": "git",
@@ -31,7 +35,7 @@
   "author": "Daniel Cousens",
   "license": "MIT",
   "devDependencies": {
-    "mocha": "*",
-    "standard": "*"
+    "standard": "*",
+    "tape": "*"
   }
 }

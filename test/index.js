@@ -1,38 +1,45 @@
-/* global describe, it */
-
-var assert = require('assert')
+var tape = require('tape')
 var xor = require('../')
 var xorInplace = require('../inplace')
+
 var fixtures = require('./fixtures')
 
-describe('xor', function () {
+tape.test('xor', function (t) {
   fixtures.forEach(function (f) {
-    it('returns ' + f.expected + ' for ' + f.a + '/' + f.b, function () {
+    t.test('returns ' + f.expected + ' for ' + f.a + '/' + f.b, function (t) {
       var a = new Buffer(f.a, 'hex')
       var b = new Buffer(f.b, 'hex')
       var actual = xor(a, b)
 
-      assert.equal(actual.toString('hex'), f.expected)
+      t.same(actual.toString('hex'), f.expected)
 
       // a/b unchanged
-      assert.equal(a.toString('hex'), f.a)
-      assert.equal(b.toString('hex'), f.b)
+      t.same(a.toString('hex'), f.a)
+      t.same(b.toString('hex'), f.b)
+
+      t.end()
     })
   })
+
+  t.end()
 })
 
-describe('xor/inplace', function () {
+tape.test('xor/inplace', function (t) {
   fixtures.forEach(function (f) {
-    it('returns ' + f.expected + ' for ' + f.a + '/' + f.b, function () {
+    t.test('returns ' + f.expected + ' for ' + f.a + '/' + f.b, function (t) {
       var a = new Buffer(f.a, 'hex')
       var b = new Buffer(f.b, 'hex')
       var actual = xorInplace(a, b)
 
-      assert.strictEqual(actual, a)
+      t.same(actual.toString('hex'), a.toString('hex'))
 
       // a mutated, b unchanged
-      assert.equal(a.toString('hex'), f.mutated || f.expected)
-      assert.equal(b.toString('hex'), f.b)
+      t.same(a.toString('hex'), f.mutated || f.expected)
+      t.same(b.toString('hex'), f.b)
+
+      t.end()
     })
   })
+
+  t.end()
 })

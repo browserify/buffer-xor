@@ -1,9 +1,18 @@
+sudo: false
+os: linux
 language: node_js
-before_install:
-  - "npm install npm -g"
 node_js:
+  - "0.10"
+  - "0.11"
   - "0.12"
+  - "iojs"
+  - "4"
+  - "5"
 env:
-  - TEST_SUITE=standard
-  - TEST_SUITE=unit
+  matrix:
+    - TEST_SUITE=unit
+matrix:
+  include:
+    - node_js: "4"
+      env: TEST_SUITE=standard
 script: "npm run-script $TEST_SUITE"

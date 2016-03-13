@@ -1,7 +1,7 @@
 # buffer-xor
 
 [![NPM Package](https://img.shields.io/npm/v/buffer-xor.svg?style=flat-square)](https://www.npmjs.org/package/buffer-xor)
-[![Build Status](https://img.shields.io/travis/cryptocoinjs/buffer-xor.svg?branch=master&style=flat-square)](https://travis-ci.org/cryptocoinjs/buffer-xor)
+[![Build Status](https://img.shields.io/travis/crypto-browserify/buffer-xor.svg?branch=master&style=flat-square)](https://travis-ci.org/crypto-browserify/buffer-xor)
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 

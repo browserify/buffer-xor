@@ -11,7 +11,7 @@ A simple module for bitwise-xor on buffers.
 ## Examples
 
 ``` javascript
-var xor = require("buffer-xor")
+var xor = require('buffer-xor')
 var a = new Buffer('00ff0f', 'hex')
 var b = new Buffer('f0f0', 'hex')
 
@@ -27,7 +27,7 @@ _NOTE: `xorInplace` won't xor past the bounds of the buffer it mutates so make
 sure it is long enough!_
 
 ``` javascript
-var xorInplace = require("buffer-xor/inplace")
+var xorInplace = require('buffer-xor/inplace')
 var a = new Buffer('00ff0f', 'hex')
 var b = new Buffer('f0f0', 'hex')
 

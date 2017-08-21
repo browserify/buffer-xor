@@ -1,6 +1,6 @@
 {
   "name": "buffer-xor",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "A simple module for bitwise-xor on buffers",
   "files": [
     "index.js",

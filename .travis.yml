@@ -10,7 +10,7 @@ node_js:
   - "12"
   - "iojs"
   - "4"
-  - "5"
+  - "14"
 env:
   matrix:
     - TEST_SUITE=unit
